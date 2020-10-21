@@ -3,7 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use \Config;
 use \Uploadcare;
-use \Uploadcare\Configuration
+use \Uploadcare\Configuration;
 
 class LaravelUploadcareServiceProvider extends ServiceProvider {
 
