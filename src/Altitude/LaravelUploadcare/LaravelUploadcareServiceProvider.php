@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use \Config;
 use \Uploadcare;
+use \Uploadcare\Configuration
 
 class LaravelUploadcareServiceProvider extends ServiceProvider {
 
@@ -42,7 +43,7 @@ class LaravelUploadcareServiceProvider extends ServiceProvider {
 			$public  = Config::get('uploadcare.public_key');
 			$private = Config::get('uploadcare.private_key');
 			
-			return new UploadcareService($public, $private);
+			return new UploadcareService(Configuration::create($public, $private));
 		});
 	}
 
